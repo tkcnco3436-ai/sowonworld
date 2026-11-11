@@ -1,10 +1,14 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ProgramCard } from "./ProgramCard";
 import { CATEGORIES, type Program, type Status, type StatusKind } from "@/lib/types";
 
 type Item = { program: Program; status: Status };
+
+// 맨 왼쪽부터 지역 전체, 부산, 서울 순. 나머지는 수도권 → 광역시 → 도 순서.
+const REGIONS = ["전체", "부산", "서울", "경기", "인천", "대구", "광주", "대전", "울산", "세종", "강원", "충북", "충남", "전북", "전남", "경북", "경남", "제주"];
+const REGION_KEY = "sowonworld-region"; // 고른 지역을 다음 방문 때도 기억
 
 const STATUS_FILTERS: { key: "all" | StatusKind | "active"; label: string }[] = [
   { key: "active", label: "신청 가능" },
@@ -19,10 +23,19 @@ export function BoardFilters({ items, initialQuery }: { items: Item[]; initialQu
   const [region, setRegion] = useState("전체");
   const [status, setStatus] = useState<(typeof STATUS_FILTERS)[number]["key"]>("active");
 
-  const regions = useMemo(
-    () => ["전체", ...Array.from(new Set(items.map((i) => i.program.region))).sort()],
-    [items],
-  );
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(REGION_KEY);
+      if (saved && REGIONS.includes(saved)) setRegion(saved);
+    } catch {}
+  }, []);
+
+  const pickRegion = (r: string) => {
+    setRegion(r);
+    try {
+      localStorage.setItem(REGION_KEY, r);
+    } catch {}
+  };
 
   const filtered = items.filter(({ program: p, status: s }) => {
     if (status === "active" && !["open", "closing", "always"].includes(s.kind)) return false;
@@ -46,11 +59,14 @@ export function BoardFilters({ items, initialQuery }: { items: Item[]; initialQu
       <div className="filters">
         <div className="filter-row">
           <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="사업명·기관·키워드 검색" aria-label="검색어" id="board-q" />
-          <select value={region} onChange={(e) => setRegion(e.target.value)} aria-label="지역" id="board-region">
-            {regions.map((r) => (
-              <option key={r} value={r}>{r === "전체" ? "지역 전체" : r}</option>
-            ))}
-          </select>
+        </div>
+        <div className="filter-row region-row" role="group" aria-label="내 지역">
+          <span>내 지역</span>
+          {REGIONS.map((r) => (
+            <button key={r} type="button" className="fchip" aria-pressed={region === r} onClick={() => pickRegion(r)}>
+              {r === "전체" ? "지역 전체" : r}
+            </button>
+          ))}
         </div>
         <div className="filter-row">
           <span>분야</span>

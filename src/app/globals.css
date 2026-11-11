@@ -121,6 +121,12 @@ p { margin: 0; }
 .fchip[aria-pressed="true"] { background: var(--charcoal); color: #fff; border-color: var(--charcoal); }
 .filters input[type="search"], .filters select { font-family: inherit; font-size: 15px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: #fff; color: var(--ink); min-width: 0; }
 .filters input[type="search"] { flex: 1; }
+.region-row { padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.region-row .fchip[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); }
+@media (max-width: 720px) {
+  .region-row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .region-row .fchip { flex-shrink: 0; }
+}
 .result-count { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
 .empty { padding: 40px 20px; text-align: center; border: 1px dashed var(--line); border-radius: var(--radius); color: var(--muted); }
 

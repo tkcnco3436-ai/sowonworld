@@ -1,5 +1,5 @@
 #!/bin/bash
-# 디지월드 — 실행 메뉴 (Finder에서 더블클릭하면 터미널에서 열립니다)
+# 소원월드 — 실행 메뉴 (Finder에서 더블클릭하면 터미널에서 열립니다)
 
 cd "$(dirname "$0")" || exit 1
 ENV_FILE=".env.local"
@@ -47,7 +47,7 @@ pause() {
 while true; do
   clear
   echo "=========================================="
-  echo "   디지월드 — 실행 메뉴"
+  echo "   소원월드 — 실행 메뉴"
   echo "=========================================="
   echo "   인증키: $(key_status)"
   echo

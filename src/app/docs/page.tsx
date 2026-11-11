@@ -3,7 +3,7 @@ import Link from "next/link";
 import { DOCUMENTS } from "@/lib/documents";
 import { ExternalLink } from "@/components/Icons";
 
-export const metadata: Metadata = { title: "서류 발급처 — 디지월드" };
+export const metadata: Metadata = { title: "서류 발급처 — 소원월드" };
 
 export default function DocsPage() {
   return (

@@ -3,7 +3,7 @@ import { getPrograms } from "@/lib/programs";
 import { getStatus, sortByDeadline } from "@/lib/status";
 import { BoardFilters } from "@/components/BoardFilters";
 
-export const metadata: Metadata = { title: "실시간 공고 — 디지월드" };
+export const metadata: Metadata = { title: "실시간 공고 — 소원월드" };
 
 export default async function BoardPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
   const { q = "" } = await searchParams;

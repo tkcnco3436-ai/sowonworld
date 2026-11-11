@@ -13,7 +13,7 @@ type Props = { params: Promise<{ id: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = getProgram((await params).id);
-  return { title: p ? `${p.title} — 디지월드` : "공고를 찾을 수 없어요" };
+  return { title: p ? `${p.title} — 소원월드` : "공고를 찾을 수 없어요" };
 }
 
 export default async function ProgramPage({ params }: Props) {

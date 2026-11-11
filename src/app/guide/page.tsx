@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SelfCheck } from "@/components/SelfCheck";
 
-export const metadata: Metadata = { title: "신청 가이드 — 디지월드" };
+export const metadata: Metadata = { title: "신청 가이드 — 소원월드" };
 
 const STEPS = [
   { id: "step-1", short: "자가진단" },

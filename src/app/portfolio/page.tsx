@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PortfolioBuilder } from "@/components/portfolio/PortfolioBuilder";
 import "./portfolio.css";
 
-export const metadata: Metadata = { title: "포트폴리오 제작소 — 디지월드" };
+export const metadata: Metadata = { title: "포트폴리오 제작소 — 소원월드" };
 
 export default function PortfolioPage() {
   return (
