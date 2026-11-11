@@ -7,6 +7,7 @@ const LINKS = [
   { href: "/board", label: "실시간 공고" },
   { href: "/guide", label: "신청 가이드" },
   { href: "/docs", label: "서류 발급처" },
+  { href: "/portfolio", label: "포트폴리오 제작" },
 ];
 
 export function NavLinks() {

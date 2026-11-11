@@ -54,12 +54,12 @@ export default function Home() {
               <b>서류 떼기</b>
               <span>증명서별 발급 사이트 바로가기</span>
             </Link>
-            <div className="tile pink" aria-disabled="true">
+            <Link href="/portfolio" className="tile pink">
               <span className="ic"><Sparkles /></span>
               <b>포트폴리오 제작</b>
-              <span>사진만 올리면 AI가 PDF로</span>
-              <span className="chip chip-closing soon">곧 오픈</span>
-            </div>
+              <span>사진과 활동 내용만 넣으면 A4 PDF로</span>
+              <span className="chip chip-closing soon">BETA</span>
+            </Link>
           </div>
         </div>
       </section>
