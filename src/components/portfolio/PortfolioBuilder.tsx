@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { EXAMPLE, PALETTE, newId, type Activity, type PortfolioData } from "@/lib/portfolio";
+import { EXAMPLE, PALETTE, formatRange, newId, type Activity, type PortfolioData } from "@/lib/portfolio";
 import { PortfolioPage, buildPages, pageSize } from "./PortfolioPages";
+import { AiPolish } from "./AiPolish";
 
 const MAX_COLORS = 3;
 const MAX_PHOTOS = 10;
@@ -90,6 +91,7 @@ export function PortfolioBuilder() {
           <legend>1. 업체 정보</legend>
           <label htmlFor="pf-company">업체명<input id="pf-company" value={data.company} onChange={(e) => update({ company: e.target.value })} placeholder="예: OO베이커리" /></label>
           <label htmlFor="pf-intro">한 줄 소개<textarea id="pf-intro" rows={2} value={data.intro} onChange={(e) => update({ intro: e.target.value })} placeholder="어떤 업체인지 1~2문장으로 적어 주세요" /></label>
+          <AiPolish kind="intro" text={data.intro} context={{ company: data.company }} onApply={(t) => update({ intro: t })} />
           <label htmlFor="pf-contact">연락처 (마지막 장에 표시)<input id="pf-contact" value={data.contact} onChange={(e) => update({ contact: e.target.value })} placeholder="전화 · 이메일 · SNS" /></label>
         </fieldset>
 
@@ -107,6 +109,7 @@ export function PortfolioBuilder() {
                 <label htmlFor={`pf-end-${a.id}`}>종료일<input id={`pf-end-${a.id}`} type="date" value={a.end} onChange={(e) => updateActivity(a.id, { end: e.target.value })} /></label>
               </div>
               <label htmlFor={`pf-content-${a.id}`}>참여 활동 내용<textarea id={`pf-content-${a.id}`} rows={4} value={a.content} onChange={(e) => updateActivity(a.id, { content: e.target.value })} placeholder="무엇을 했고 어떤 결과가 있었는지 적어 주세요" /></label>
+              <AiPolish kind="content" text={a.content} context={{ company: data.company, title: a.title, period: formatRange(a) }} onApply={(t) => updateActivity(a.id, { content: t })} />
               <div className="pf-upload">
                 <span>사진 ({a.photos.length}/{MAX_PHOTOS}) · 4장 넘으면 사진 페이지가 추가돼요</span>
                 <div className="pf-thumbs">

@@ -42,6 +42,10 @@ npm run build && npm start
 
 인증키 발급 후 첫 수집 때 API 응답 필드명이 `scripts/collect-bizinfo.mjs`의 `normalize()`와 맞는지 한 번 확인하세요.
 
+## AI 문장 다듬기 (포트폴리오 제작소)
+
+`/portfolio`의 'AI로 문장 다듬기'는 `/api/polish`에서 Claude(claude-opus-5-5)를 호출합니다. `ANTHROPIC_API_KEY`를 `.env.local`과 Vercel 프로젝트 환경 변수에 넣어야 동작합니다. 키가 없으면 버튼을 눌렀을 때 '아직 설정되지 않았어요' 안내가 나옵니다.
+
 ## 지금 들어 있는 데이터
 
 `data/programs.json`의 공고 8건은 화면 확인용 **예시**(`"sample": true`)입니다. 화면에 '예시' 배지와 안내가 표시됩니다. 실제 공고를 승인해 넣은 뒤 예시 항목을 지우면 안내도 사라집니다.

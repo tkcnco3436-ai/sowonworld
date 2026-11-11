@@ -44,6 +44,18 @@
 .pf-hint { font-size: 13px; text-align: center; }
 @media (max-width: 960px) { .pf-viewer { position: static; } }
 
+/* AI 문장 다듬기 */
+.pf-ai { display: flex; flex-direction: column; gap: 8px; margin-top: -4px; }
+.pf-ai-btn { align-self: flex-start; font-family: inherit; font-size: 13px; font-weight: 800; padding: 7px 14px; border-radius: 999px; border: 1px solid var(--pink); background: var(--pink-bg); color: var(--pink-ink); cursor: pointer; }
+.pf-ai-btn:disabled { opacity: .5; cursor: not-allowed; }
+.pf-ai-error { font-size: 13px; color: var(--pink-ink); }
+.pf-ai-result { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; background: #fff; border: 2px solid var(--pink); font-size: 14px; }
+.pf-ai-result b { color: var(--ink); font-size: 13px; }
+.pf-ai-result p { color: var(--ink); line-height: 1.65; white-space: pre-wrap; }
+.pf-ai-result .muted { font-size: 12px; }
+.pf-ai-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.pf-ai-actions .btn { padding: 8px 14px; font-size: 13px; }
+
 /* ===== A4 페이지 템플릿 ===== */
 .pf-page { position: relative; overflow: hidden; background: #fff; color: #1a1a1a; font-family: var(--font-pretendard), -apple-system, sans-serif; word-break: keep-all; box-sizing: border-box; padding: 64px 60px 56px; display: flex; flex-direction: column; }
 .pf-landscape { padding: 52px 64px 48px; }
