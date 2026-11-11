@@ -1,134 +1,395 @@
 [
   {
-    "id": "sample-signboard-oo-gu",
-    "title": "2026 OO구 소상공인 간판개선 지원사업",
-    "agency": "OO구청",
-    "region": "서울",
-    "categories": ["간판"],
-    "target": "OO구에 사업장을 둔 소상공인",
-    "support": "간판 디자인 및 제작·설치비 일부 지원",
-    "amount": "업체당 최대 OOO만 원 (자부담 OO%)",
-    "applyStart": "2026-11-02",
-    "applyEnd": "2026-11-14",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "노후 간판을 교체하려는 관내 소상공인에게 디자인과 제작·설치 비용 일부를 지원합니다. 선정 후 구청이 지정한 디자인 업체와 시안을 협의합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "tax-national", "tax-local", "plan", "photos"],
-    "sample": true
+    "id": "bizinfo-PBLN_000000000127767",
+    "title": "[전북] 2026년 농생명기업 홍보 콘텐츠 제작 참여기업 모집 공고(전북 농생명산업 일자리 생태계 조성 프로젝트)",
+    "agency": "전북벤처산업발전협의회",
+    "region": "전북",
+    "categories": [
+      "온라인"
+    ],
+    "target": "중소기업",
+    "support": "도내 농생명ㆍ식품분야 기업의 우수한 사업 경쟁력과 근무환경을 효과적으로 홍보하고, 맞춤형 홍보 콘텐츠 제작을 통한 기업 인지도 제고 및 신규 인…",
+    "applyStart": "2026-11-06",
+    "applyEnd": "2026-11-13",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127767",
+    "source": "bizinfo",
+    "summary": "도내 농생명ㆍ식품분야 기업의 우수한 사업 경쟁력과 근무환경을 효과적으로 홍보하고, 맞춤형 홍보 콘텐츠 제작을 통한 기업 인지도 제고 및 신규 인력 유입 기반 마련을 위해 「2026년 전북 농생명산업 일자리 생태계 조성 프로젝트」의 일환으로 농생명기업 홍보 콘텐츠 제작 지원사업 참여기업을 아래와 같이 모집하오니 많은 관심과 참여 바랍니다. ☞ 도내 농생명ㆍ식품분야 기업 ☞ 기업별 특성과 홍보 목적에 맞춘 구인형 또는 기업홍보형 숏폼 영상 제작 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.325Z"
   },
   {
-    "id": "sample-package-agri",
-    "title": "농식품 소상공인 포장디자인 개선 지원",
-    "agency": "OO 농식품 유관기관",
-    "region": "전국",
-    "categories": ["포장", "브랜드"],
-    "target": "농식품을 제조·판매하는 소상공인",
-    "support": "제품 패키지·라벨 디자인 개발",
-    "amount": "업체당 최대 OOO만 원",
-    "applyStart": "2026-11-01",
-    "applyEnd": "2026-11-17",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "온라인 판매용 제품 포장과 라벨 디자인을 새로 만들거나 개선하는 비용을 지원합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "vat-base", "plan", "photos"],
-    "sample": true
-  },
-  {
-    "id": "sample-design-region",
-    "title": "2026 지역기업 디자인 개발 지원사업",
-    "agency": "OO디자인진흥원",
-    "region": "부산",
-    "categories": ["브랜드", "포장", "온라인"],
-    "target": "지역 소재 중소기업·소상공인",
-    "support": "브랜드(BI)·패키지·상세페이지 등 디자인 개발",
-    "amount": "과제당 최대 OOOO만 원",
-    "applyStart": "2026-11-05",
-    "applyEnd": "2026-11-30",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "디자인 전문회사와 함께 브랜드, 패키지, 온라인 홍보물 중 필요한 디자인을 개발합니다. 수행기관은 진흥원 등록 디자인 전문회사 중에서 선택합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "tax-national", "tax-local", "insurance-list", "plan"],
-    "sample": true
-  },
-  {
-    "id": "sample-brand-semas",
-    "title": "소상공인 브랜드 육성 지원",
-    "agency": "OO공단",
-    "region": "전국",
-    "categories": ["브랜드"],
-    "target": "업력 1년 이상 소상공인",
-    "support": "로고·브랜드 가이드 개발 및 브랜딩 컨설팅",
-    "applyStart": "2026-11-10",
-    "applyEnd": "2026-12-10",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "브랜드가 없거나 낡은 소상공인에게 로고와 브랜드 가이드 개발, 브랜딩 컨설팅을 지원합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "tax-national", "plan"],
-    "sample": true
-  },
-  {
-    "id": "sample-online-detail",
-    "title": "온라인 판로 지원 상세페이지 제작",
-    "agency": "OO경제진흥원",
-    "region": "경기",
-    "categories": ["온라인"],
-    "target": "온라인 판매를 준비하는 도내 소상공인",
-    "support": "상세페이지·제품 촬영·SNS 콘텐츠 제작",
-    "amount": "업체당 최대 OOO만 원",
-    "applyStart": "2026-11-03",
-    "applyEnd": "2026-12-20",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "온라인 쇼핑몰 입점에 필요한 상세페이지와 제품 사진, SNS 홍보 콘텐츠 제작을 지원합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "vat-base", "plan", "photos"],
-    "sample": true
-  },
-  {
-    "id": "sample-store-env",
-    "title": "점포 환경개선 및 디자인 컨설팅",
-    "agency": "OO시청",
-    "region": "대전",
-    "categories": ["간판", "기타"],
-    "target": "관내 전통시장·골목상권 소상공인",
-    "support": "점포 외관·인테리어 개선, 디자인 컨설팅",
-    "applyStart": "2026-12-01",
-    "applyEnd": "2026-12-26",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "점포 외관과 내부 환경을 개선하는 비용과 디자인 컨설팅을 지원합니다. 12월 1일부터 접수합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "tax-local", "photos"],
-    "sample": true
-  },
-  {
-    "id": "sample-ip-brand",
-    "title": "소상공인 브랜드·디자인 지식재산 지원",
-    "agency": "OO지식재산센터",
-    "region": "전국",
-    "categories": ["브랜드", "기타"],
-    "target": "상표·디자인 출원이 필요한 소상공인",
-    "support": "브랜드 개발과 상표·디자인 출원 비용",
+    "id": "bizinfo-PBLN_000000000126349",
+    "title": "[충남] 당진시 2026년 청년 취ㆍ창업 지원사업 디자인 개선 지원 사업 참여 기업 모집 공고",
+    "agency": "충남산학융합원",
+    "region": "충남",
+    "categories": [
+      "온라인"
+    ],
+    "target": "창업벤처",
+    "support": "당진시와 (사)충남산학융합원에서는 당진시 청년 창업기업의 제품 및 홍보 콘텐츠 경쟁력 강화와 해외 온라인 판매채널 진출 기반 마련을 위하여 「디…",
     "applyStart": null,
     "applyEnd": null,
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "예산 소진 시까지 상시 접수합니다. 새로 만든 로고와 브랜드를 상표로 등록하는 비용을 지원합니다.",
-    "requiredDocs": ["biz-reg", "sme-confirm", "plan"],
-    "sample": true
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126349",
+    "source": "bizinfo",
+    "summary": "당진시와 (사)충남산학융합원에서는 당진시 청년 창업기업의 제품 및 홍보 콘텐츠 경쟁력 강화와 해외 온라인 판매채널 진출 기반 마련을 위하여 「디자인 개선 지원 프로그램」을 운영하오니, 제품 홍보 콘텐츠 및 온라인 판매페이지 디자인 개선과 해외 온라인 플랫폼 입점 지원을 희망하는 관내 청년 창업기업의 많은 참여 바랍니다. ☞ 당진시 소재 7년 이내 청년 창업 기업 - 공고일 기준 대표자가 만 39세 이하 청년인 기업 - 자체 생산 또는 판매 가능한 제품을 보유한 기업 - 쇼피(Shpoee) 입점 및 해외 온라인 판매가 가능한 제품을 보유한 기업 ☞ 제품 이미지, 상세페이지, 배너, 썸네일 등 온라인 판매 콘텐츠 디자인 개선 지원 - 기업 및 제품 특성을 반영한 홍보 콘텐츠 기획 및 고도화 지원 - 쇼피(Sho",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.334Z"
   },
   {
-    "id": "sample-closed-signage",
-    "title": "골목상권 간판 정비 시범사업",
-    "agency": "OO군청",
-    "region": "전남",
-    "categories": ["간판"],
-    "target": "OO군 소재 소상공인",
-    "support": "간판 교체 비용 지원",
-    "applyStart": "2026-10-20",
-    "applyEnd": "2026-11-05",
-    "url": "https://www.bizinfo.go.kr",
-    "source": "sample",
-    "summary": "접수가 끝난 공고입니다. 다음 회차 공고를 받으려면 알림을 신청하세요.",
-    "requiredDocs": ["biz-reg", "tax-local", "photos"],
-    "sample": true
+    "id": "bizinfo-PBLN_000000000124402",
+    "title": "[충북] 2026년 한방바이오제천몰 웹상세페이지 제작 지원사업 공고",
+    "agency": "제천한방천연물산업진흥재단",
+    "region": "충북",
+    "categories": [
+      "온라인"
+    ],
+    "target": "중소기업",
+    "support": "한방천연물 브랜드 경쟁력 강화 및 온라인 판매 활성화를 위하여 추진하는 「2026년 한방바이오제천몰 웹상세페이지 제작 지원사업」을 통해 입접기업…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000124402",
+    "source": "bizinfo",
+    "summary": "한방천연물 브랜드 경쟁력 강화 및 온라인 판매 활성화를 위하여 추진하는 「2026년 한방바이오제천몰 웹상세페이지 제작 지원사업」을 통해 입접기업 제품의 정보 전달력과 상품 경쟁력을 향상시키고자 다음과 같이 공고하오니 한방바이오제천몰 입접기업의 많은 신청 바랍니다. ☞ 한방바이오제천몰 입점기업(※ 신규 입점 예정기업 포함) ☞ 제품별 웹상세페이지 신규 제작 또는 리뉴얼, GIF(움직이는 이미지) 등 시각 콘텐츠 제작, 모바일 최적화 및 반응형 웹 디자인 지원 - 기업당 최대 2개 제품, 제품당 제작비 40만원 내외 총사업비 범위 내 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.336Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000127825",
+    "title": "[충남] 청양군 2026년 착한가격업소 소규모 시설개선 지원사업 추가 모집 공고",
+    "agency": "충청남도",
+    "region": "충남",
+    "categories": [
+      "간판"
+    ],
+    "target": "중소기업",
+    "support": "지속적인 고물가시대에 저렴한 가격과 양질의 서비스를 제공하는 착한가격업소의 환경개선을 지원하기 위하여 2026년 청양군 착한가격업소 소규모 시설…",
+    "applyStart": "2026-11-09",
+    "applyEnd": "2026-11-16",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127825",
+    "source": "bizinfo",
+    "summary": "지속적인 고물가시대에 저렴한 가격과 양질의 서비스를 제공하는 착한가격업소의 환경개선을 지원하기 위하여 2026년 청양군 착한가격업소 소규모 시설개선 지원사업 추가 모집 계획을 다음과 같이 공고하오니, 신청을 희망하시는 청양군 착한가격업소 지정 업소에 해당하는 대표자께서는 신청하여 주시기 바랍니다. ☞ 청양군 착한가격업소 지정 후 1년 이상 경과한 업소 ☞ 소규모 인테리어, 간판 교체 등(업소당 최대 10,000천원까지) 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.324Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000127724",
+    "title": "[전남광주] 보성군 2026년 3차 일반음식점 시설환경개선 지원사업 신청 공고",
+    "agency": "전남광주통합특별시",
+    "region": "전남광주",
+    "categories": [
+      "간판"
+    ],
+    "target": "중소기업",
+    "support": "안전하고 위생적인 외식환경을 조성하고자 일반음식점 시설환경개선 지원사업을 다음과 같이 공고하오니 여러분의 많은 응모 바랍니다. ☞ 관내 주소를…",
+    "applyStart": "2026-11-04",
+    "applyEnd": "2026-11-11",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127724",
+    "source": "bizinfo",
+    "summary": "안전하고 위생적인 외식환경을 조성하고자 일반음식점 시설환경개선 지원사업을 다음과 같이 공고하오니 여러분의 많은 응모 바랍니다. ☞ 관내 주소를 두고 6개월 이상 일반음식점을 영업 중인 자(공고일 기준) ☞ 입식테이블 교체, 주방 및 화장실 및 손씻는 시설, 객석ㆍ객실 환경개선, 업소 간판 교체 등 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.326Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000127702",
+    "title": "한국수력원자력 원전지역 소상공인 노후점포 친환경개선 지원과제 참여모집 공고",
+    "agency": "한국표준협회",
+    "region": "부산",
+    "categories": [
+      "브랜드",
+      "간판"
+    ],
+    "target": "소상공인",
+    "support": "상생협력재단은 한국수력원자력 원전본부가 관할하는 6개 지역(기장, 울주, 영광ㆍ고창, 경주, 울진)의 소상공인 경쟁력 강화 및 지역상생 실천을…",
+    "applyStart": "2026-11-04",
+    "applyEnd": "2026-11-20",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127702",
+    "source": "bizinfo",
+    "summary": "상생협력재단은 한국수력원자력 원전본부가 관할하는 6개 지역(기장, 울주, 영광ㆍ고창, 경주, 울진)의 소상공인 경쟁력 강화 및 지역상생 실천을 위해 「소상공인 노후점포 친환경 개선 그린스토어 지원과제」에 참여할 소상공인을 다음과 같이 모집하오니 많은 관심과 참여 바랍니다. ☞ 원전본부 관할 6개(기장, 울주, 영광ㆍ고창, 경주, 울진) 지역 소상공인 ☞ 한수원과 함께하는 지역사회사업을 공동브랜드를 지원하고, 점포 업종ㆍ여건 등에 맞춘 친환경 개선사업을 지원(기업당 13.5백만원) - (지역활성화, 공통) 한수원 공동 브랜딩, 상생실천 지원 - (환경개선) 노후환경 개선(친환경 마감재, 고효율 LED 등) 현대화 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.327Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000127592",
+    "title": "[전남광주] 2026년 상품 브랜드디자인 및 마케팅전략 개발사업 수혜ㆍ수행기업 모집 공고",
+    "agency": "광주디자인진흥원",
+    "region": "전남광주",
+    "categories": [
+      "포장"
+    ],
+    "target": "중소기업",
+    "support": "재단법인 광주디자인진흥원에서는 전남광주통합특별시 내 22개 시ㆍ군 소재 사회적기업, 마을기업, 청년 농어업기업, 농촌융복합산업(6차산업) 인증기…",
+    "applyStart": "2026-11-18",
+    "applyEnd": "2026-11-19",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127592",
+    "source": "bizinfo",
+    "summary": "재단법인 광주디자인진흥원에서는 전남광주통합특별시 내 22개 시ㆍ군 소재 사회적기업, 마을기업, 청년 농어업기업, 농촌융복합산업(6차산업) 인증기업을 대상으로 「2026 상품 브랜드디자인 및 마케팅전략 개발사업」을 추진합니다. 본 사업의 지원을 희망하는 기업을 아래와 같이 모집하오니 많은 관심과 참여 바랍니다. ☞ 전남광주통합특별시 내 22개 시군 소재 사회적기업, 마을기업, 청년 농어업기업, 농촌융복합산업(6차산업) 인증기업(협동조합/자활기업 제외) ※ 수혜기업과 수행기업 컨소시엄 구성 ※ 자세한 지원대상 공고문 참조 ☞ 상품 브랜드디자인 개발, 포장재 제작, 홍보ㆍ마케팅, 컨설팅 등 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.330Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000126578",
+    "title": "[대구] 2026년 소상공인 IP창출지원 후속지원 사업(디자인출원) 모집공고",
+    "agency": "대구지식재산센터",
+    "region": "대구",
+    "categories": [
+      "브랜드",
+      "포장"
+    ],
+    "target": "소상공인",
+    "support": "대구지식재산센터의 올해 상표출원 지원사업의 수혜를 받은 소상공인을 대상으로, 보유한 제품의 독창적인 디자인에 대한 지식재산 권리화를 후속지원하기…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126578",
+    "source": "bizinfo",
+    "summary": "대구지식재산센터의 올해 상표출원 지원사업의 수혜를 받은 소상공인을 대상으로, 보유한 제품의 독창적인 디자인에 대한 지식재산 권리화를 후속지원하기 위하여, “소상공인 IP창출지원 후속지원사업(디자인출원)”을 진행하오니, 해당하는 소상공인은 아래 사항에 따라 신청하여 주시기 바랍니다. ☞ 대구지식재산센터에서 올해 상표출원 또는 IP창출종합패키지를 지원받은 소상공인 -「소상공인기본법」제2조에 따른 소상공인(사업자등록 보유, 휴폐업자 지원불가) ☞ 상표출원 진행 중(후) 상담을 통해 파악된 제품 디자인, 포장디자인, 화상디자인 아이템 중 프로토타입 형태가 구현되어 최소한의 개발을 통해 즉시 출원이 가능한 건에 대해 디자인 출원 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.333Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000126146",
+    "title": "[강원] 2026년 강원권 디자인법률자문 서비스 운영 공고(디자인법률자문단 운영사업)",
+    "agency": "강원디자인진흥원",
+    "region": "강원",
+    "categories": [
+      "기타"
+    ],
+    "target": "중소기업",
+    "support": "(재)강원디자인진흥원에서는 디자인산업 현장에서 발생하는 불공정 거래, 지식재산권 분쟁, 경영상(노무, 세무회계 등)의 문제점을 해결하기 위하여…",
+    "applyStart": "2026-05-08",
+    "applyEnd": "2026-11-30",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126146",
+    "source": "bizinfo",
+    "summary": "(재)강원디자인진흥원에서는 디자인산업 현장에서 발생하는 불공정 거래, 지식재산권 분쟁, 경영상(노무, 세무회계 등)의 문제점을 해결하기 위하여 디자인법률자문단을 운영하오니 자문서비스 운영절차에 따라 신청하여 주시기 바랍니다. ☞ 강원도 내 디자인기업 및 디자인 활용 기업(중소기업) - 디자인관련 예비창업자, 디자이너, 프리랜서 디자이너, 디자인관련학과 학생 등 ☞ 전문자격사로 구성된 디자인법률자문단과 1:1맞춤 무료상담서비스 ※ 디자인법률자문단 구성 : 자문위원 10명(변호사2, 변리사5, 회계사2, 노무사1) - 미해결 분쟁 건은 한국디자인진흥원(KIDP) 분쟁조정위원회로 이관 가능(용역비 미지급, 디자인 도용 등 디자인 관련 분쟁)",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.334Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000126014",
+    "title": "[강원] 2026년 디자인어워드(해외) 출품지원 참여기업 모집 재공고",
+    "agency": "강원디자인진흥원",
+    "region": "강원",
+    "categories": [
+      "기타"
+    ],
+    "target": "중소기업",
+    "support": "강원디자인진흥원은 도내 중소기업 및 디자인기업의 디자인 경쟁력 강화 및 브랜드 가치 제고를 위하여 「2026 디자인어워드(해외) 출품지원사업」을…",
+    "applyStart": "2026-08-20",
+    "applyEnd": "2026-12-04",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000126014",
+    "source": "bizinfo",
+    "summary": "강원디자인진흥원은 도내 중소기업 및 디자인기업의 디자인 경쟁력 강화 및 브랜드 가치 제고를 위하여 「2026 디자인어워드(해외) 출품지원사업」을 시행하오니, 관심 있는 기업의 많은 신청 바랍니다. ☞ 아래 요건(필수 1~3번)을 모두 충족하여야 함 - (필수 1) 강원지역 소재 중소기업 또는 디자인기업(사업자등록증명원 기준) - (필수 2) 출품 상품의 소유권을 보유한 기업 또는 디자인개발기업 ※ 단, 디자인개발기업은 상품 소유기업과 공동 신청하거나 사전 동의를 받아 신청 가능 - (필수 3) 참여 어워드 출품자격 요건 해당 기업(어워드 공식 홈페이지 확인 必) ☞ iF, Red Dot, IDEA 디자인어워드 출품 및 심사료 등(기업당 최대 200만원) 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.334Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000123983",
+    "title": "[서울ㆍ인천ㆍ강원] 2026년 상시 디자인 컨설팅 지원 공고",
+    "agency": "한국디자인진흥원",
+    "region": "서울·인천·강원",
+    "categories": [
+      "기타"
+    ],
+    "target": "중소기업",
+    "support": "한국디자인진흥원에서 서울, 인천, 강원지역 중소기업들에게 상시적 디자인 컨설팅을 통하여 기업의 제품개발과 관련된 애로사항을 진단하고, 방향성을…",
+    "applyStart": "2026-07-03",
+    "applyEnd": "2026-12-31",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000123983",
+    "source": "bizinfo",
+    "summary": "한국디자인진흥원에서 서울, 인천, 강원지역 중소기업들에게 상시적 디자인 컨설팅을 통하여 기업의 제품개발과 관련된 애로사항을 진단하고, 방향성을 제시하는 맞춤형 일일 컨설팅을 지원하오니, 많은 관심과 신청 바랍니다. ☞ 서울ㆍ인천ㆍ강원 소재 중소ㆍ중견기업 ☞ 디자인 관련 자문, CMF 컨설팅 등 지원(제품 디자인, 제조기술, 시각디자인, 브랜드ㆍ패키지, UX/UI 등) - 미팅룸, 컨퍼런스룸, 촬영스튜디오 무료대관시설 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.337Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000120976",
+    "title": "[광주] 2026년 광주산업화디자인프로젝트 글로벌 디자인 전문기업 육성 지원 참여기업 모집 공고",
+    "agency": "광주디자인진흥원",
+    "region": "광주",
+    "categories": [
+      "기타"
+    ],
+    "target": "중소기업",
+    "support": "광주디자인진흥원에서 주관하는 「2026 광주산업화디자인프로젝트」사업의 일환으로 광주 지역 제조기업 및 디자인기업 글로벌 경쟁력 확보 및 브랜드…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120976",
+    "source": "bizinfo",
+    "summary": "광주디자인진흥원에서 주관하는 「2026 광주산업화디자인프로젝트」사업의 일환으로 광주 지역 제조기업 및 디자인기업 글로벌 경쟁력 확보 및 브랜드 인지도 향상을 위해 지원사업을 추진하오니 많은 관심 바랍니다. ☞ 광주광역시 소재 제조기업 및 디자인전문기업 ☞ 기업당 최대 3,000천원 지원 - 국내ㆍ외 공모전(GD, Red Dot, iF, IDEA, PINUP, CES 등) 운영시기를 고려한 출품비 지원 - 공모전 출품 관련 전문가 기술 자문 지원(희망 기업에 한함)",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.340Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000120418",
+    "title": "[경남] 김해시 2026년 창업기업 마케팅 역량강화 지원사업 디자인 멘토링 및 어워드 출품료 수혜기업 모집 공고",
+    "agency": "김해의생명산업진흥원",
+    "region": "경남",
+    "categories": [
+      "기타"
+    ],
+    "target": "창업벤처",
+    "support": "김해시 관내 창업기업의 디자인 개선을 위한 전문가 멘토링 제공과 디자인어워드 출품을 지원하여 창업기업의 디자인 경쟁력 강화를 지원하고자 합니다.…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000120418",
+    "source": "bizinfo",
+    "summary": "김해시 관내 창업기업의 디자인 개선을 위한 전문가 멘토링 제공과 디자인어워드 출품을 지원하여 창업기업의 디자인 경쟁력 강화를 지원하고자 합니다. 디자인 혁신을 통해 성장하고자 하는 기업의 많은 참여를 바랍니다. ☞ 관내 창업 7년 이내 기업(단순 유통, 판매업 제외) ☞ 디자인 멘토링, 디자인어워드 출품작 멘토링 및 출품료 지원 ① 2026년 국내 우수디자인상품선정(GOOD DESIGN KOREA) 2차 심사료 - 1차 심사를 통과한 상품에 한함(1개사/700천원) ② 해외 디자인어워드 수상작 (1개사/최대 1,000천원)",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.341Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000118108",
+    "title": "[서울] 은평구 2026년 소규모 자영업자 LED간판 설치 지원사업 공고",
+    "agency": "서울특별시",
+    "region": "서울",
+    "categories": [
+      "간판"
+    ],
+    "target": "소상공인",
+    "support": "불법간판을 정비하고 규정에 맞는 간판설치를 유도하여 도시미관 개선에 기여하기 위한 「2026년 소규모 자영업자 LED간판 설치 지원사업」을 다음…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000118108",
+    "source": "bizinfo",
+    "summary": "불법간판을 정비하고 규정에 맞는 간판설치를 유도하여 도시미관 개선에 기여하기 위한 「2026년 소규모 자영업자 LED간판 설치 지원사업」을 다음과 같이 공고하니 많은 참여 바랍니다. ☞ 다음을 모두 충족하는 은평구 관내에 사업장이 등록된 소규모 자영업자 - 면적 기준 : 99㎡ 미만 - 은평구에 등록된 옥외광고업체를 선정해 간판 설치하는 사업자 - 2025. 1. 1. 이후 은평구에서 간판 교체 지원받은 내역이 없는 사업자 ☞ 영업장 면적 99㎡(30평) 미만 신규 및 기존 자영업자에게 에너지 절약형 LED벽면이용간판(입체형 또는 판류형) 1개 지원 - 각 업소당 800천원 이내 지원",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.344Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000127725",
+    "title": "[경기] 2026년 AI콘텐츠 제작 및 마케팅 활용 교육 참여업체 모집 공고(중소기업 마케팅 지원사업)",
+    "agency": "경기도주식회사",
+    "region": "경기",
+    "categories": [
+      "온라인"
+    ],
+    "target": "중소기업",
+    "support": "경기도와 경기도주식회사는 道내 중소기업 우수 제품의 유통 판로개척 및 내수 판매증진을 위하여「2026년 마케팅 지원사업 AI콘텐츠 제작 및 마케…",
+    "applyStart": "2026-11-04",
+    "applyEnd": "2026-11-13",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000127725",
+    "source": "bizinfo",
+    "summary": "경기도와 경기도주식회사는 道내 중소기업 우수 제품의 유통 판로개척 및 내수 판매증진을 위하여「2026년 마케팅 지원사업 AI콘텐츠 제작 및 마케팅 활용」 교육에 참여하실 업체를 다음과 같이 모집하오니 많은 신청 바랍니다. ☞ 경기도에 본사 또는 공장이 있는 중소기업(공고일 현재 기준) ☞ AI콘텐츠 제작 실습 및 마케팅 활용 교육, 콘텐츠제작 피드백 지원 ※ 단체 채팅방 운영 및 이메일을 통한 질의응답 및 실습 ※ 자세한 지원내용 공고문 참조",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.326Z"
+  },
+  {
+    "id": "bizinfo-PBLN_000000000119791",
+    "title": "[경기] 부천시 2026년 공공배달앱 배달특급 개별 가맹점 홍보물 제작 지원 공고",
+    "agency": "부천산업진흥원",
+    "region": "경기",
+    "categories": [
+      "온라인"
+    ],
+    "target": "중소기업",
+    "support": "부천시와 부천상권활성화센터는 부천지역 내 배달특급 가맹점 활성화를 위해 개별 가맹점 맞춤형 홍보물 제작 지원사업을 추진하고자 합니다. 이에 따라…",
+    "applyStart": null,
+    "applyEnd": null,
+    "periodNote": "예산 소진시까지",
+    "url": "https://www.bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?pblancId=PBLN_000000000119791",
+    "source": "bizinfo",
+    "summary": "부천시와 부천상권활성화센터는 부천지역 내 배달특급 가맹점 활성화를 위해 개별 가맹점 맞춤형 홍보물 제작 지원사업을 추진하고자 합니다. 이에 따라 본 사업에 참여할 가맹점을 모집하오니 적극적인 참여 바랍니다. ☞ 부천시 내 배달특급 가맹점 ☞ 개별 상점 맞춤형 홍보물 제작 지원(전단지, 스티커 등) - 상점당 최대 50만원 이내",
+    "requiredDocs": [
+      "biz-reg",
+      "sme-confirm",
+      "tax-national",
+      "tax-local",
+      "plan"
+    ],
+    "collectedAt": "2026-11-11T08:08:39.342Z"
   }
 ]

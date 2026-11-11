@@ -1,0 +1,4 @@
+# Vercel에 올리지 않을 파일 (인증키, 수집 중간 파일)
+.env*
+!.env.local.example
+data/raw-sample.json

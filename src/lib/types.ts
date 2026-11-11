@@ -12,6 +12,7 @@ export type Program = {
   amount?: string;
   applyStart: string | null; // YYYY-MM-DD
   applyEnd: string | null; // null이면 상시 접수
+  periodNote?: string; // 날짜 대신 "예산 소진시까지" 같은 문구로 공지된 경우
   url: string;
   source: "bizinfo" | "manual" | "sample";
   summary: string;

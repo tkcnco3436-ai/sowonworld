@@ -14,7 +14,7 @@ function parseDate(s: string) {
 
 export function getStatus(p: Program, today = new Date()): Status {
   const now = startOfDay(today);
-  if (!p.applyEnd) return { kind: "always", label: "상시 접수", daysLeft: null };
+  if (!p.applyEnd) return { kind: "always", label: p.periodNote ?? "상시 접수", daysLeft: null };
   const end = parseDate(p.applyEnd);
   if (p.applyStart && parseDate(p.applyStart) > now) {
     return { kind: "upcoming", label: "접수 예정", daysLeft: null };
@@ -38,6 +38,6 @@ export function sortByDeadline(list: Program[], today = new Date()) {
 
 export function formatPeriod(p: Program) {
   const f = (s: string) => s.replaceAll("-", ".");
-  if (!p.applyEnd) return "상시 접수";
+  if (!p.applyEnd) return p.periodNote ?? "상시 접수";
   return `${p.applyStart ? f(p.applyStart) : ""} ~ ${f(p.applyEnd)}`;
 }

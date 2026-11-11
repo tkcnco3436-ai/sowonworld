@@ -28,7 +28,7 @@ export function BoardFilters({ items, initialQuery }: { items: Item[]; initialQu
     if (status === "active" && !["open", "closing", "always"].includes(s.kind)) return false;
     if (status !== "active" && status !== "all" && s.kind !== status) return false;
     if (cats.length && !p.categories.some((c) => cats.includes(c))) return false;
-    if (region !== "전체" && p.region !== region && p.region !== "전국") return false;
+    if (region !== "전체" && !p.region.includes(region) && p.region !== "전국") return false;
     const q = query.trim();
     if (q) {
       const hay = `${p.title} ${p.agency} ${p.support} ${p.summary} ${p.categories.join(" ")}`;

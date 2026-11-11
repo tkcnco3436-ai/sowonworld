@@ -14,7 +14,9 @@ import readline from "node:readline/promises";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const INBOX = path.join(ROOT, "data", "inbox.json");
 const PROGRAMS = path.join(ROOT, "data", "programs.json");
-const read = (f) => JSON.parse(fs.readFileSync(f, "utf8"));
+const REJECTED = path.join(ROOT, "data", "rejected.json"); // 반려한 공고 id. 다음 수집 때 다시 올라오지 않게 합니다.
+const read = (f) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : []);
+const rejected = read(REJECTED);
 const write = (f, v) => fs.writeFileSync(f, JSON.stringify(v, null, 2) + "\n");
 const clean = ({ designScore, ...p }) => p;
 
@@ -29,7 +31,8 @@ const programs = read(PROGRAMS);
 const show = (p, n) => {
   console.log(`\n[${n}] ${p.title}`);
   console.log(`  기관: ${p.agency} · 지역: ${p.region} · 분야: ${p.categories.join(", ")}`);
-  console.log(`  기간: ${p.applyStart ?? "?"} ~ ${p.applyEnd ?? "상시"} · 디자인 관련도: ${p.designScore ?? "-"}`);
+  const period = p.applyEnd ? `${p.applyStart ?? "?"} ~ ${p.applyEnd}` : (p.periodNote ?? "상시");
+  console.log(`  기간: ${period} · 디자인 관련도: ${p.designScore ?? "-"}`);
   console.log(`  원문: ${p.url}`);
 };
 const pickNums = (s) => (s === "all" ? inbox.map((_, i) => i + 1) : s.split(",").map((x) => Number(x.trim())).filter(Boolean));
@@ -60,10 +63,12 @@ if (approveArg !== null || rejectArg !== null) {
   const keep = [];
   inbox.forEach((p, i) => {
     if (approve.has(i + 1)) programs.push(clean(p));
-    else if (!reject.has(i + 1)) keep.push(p);
+    else if (reject.has(i + 1)) rejected.push(p.id);
+    else keep.push(p);
   });
   write(PROGRAMS, programs);
   write(INBOX, keep);
+  write(REJECTED, rejected);
   console.log(`승인 ${approve.size}건, 반려 ${reject.size}건. 남은 대기 ${keep.length}건.`);
   process.exit(0);
 }
@@ -77,7 +82,9 @@ for (const [i, p] of inbox.entries()) {
   if (a === "y") {
     programs.push(clean(p));
     approved++;
-  } else if (a !== "n") {
+  } else if (a === "n") {
+    rejected.push(p.id);
+  } else {
     keep.push(p);
   }
 }
@@ -85,4 +92,5 @@ rl.close();
 
 write(PROGRAMS, programs);
 write(INBOX, keep);
+write(REJECTED, rejected);
 console.log(`\n승인 ${approved}건을 보드에 추가했습니다. 남은 대기 ${keep.length}건.`);
