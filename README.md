@@ -48,7 +48,7 @@ npm run build && npm start
 
 ## 지금 들어 있는 데이터
 
-`data/programs.json`의 공고 8건은 화면 확인용 **예시**(`"sample": true`)입니다. 화면에 '예시' 배지와 안내가 표시됩니다. 실제 공고를 승인해 넣은 뒤 예시 항목을 지우면 안내도 사라집니다.
+`data/programs.json`에는 기업마당에서 수집해 검수 승인한 실제 공고가 들어 있습니다. 반려한 공고 id는 `data/rejected.json`에 남아 다시 수집되지 않습니다.
 
 ## 배포 전 확인할 것
 
