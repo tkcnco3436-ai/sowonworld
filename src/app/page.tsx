@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getPrograms } from "@/lib/programs";
 import { getStatus, sortByDeadline } from "@/lib/status";
 import { ProgramCard } from "@/components/ProgramCard";
+import { LevelGate } from "@/components/onboarding/LevelGate";
 import { BookOpen, FileCheck, Megaphone, Search, Sparkles } from "@/components/Icons";
 
 export const revalidate = 3600;
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <>
+      <LevelGate />
       <section className="hero">
         <div className="container">
           <span className="eyebrow">소상공인 디자인 지원사업 모음</span>
@@ -39,7 +41,7 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <div className="tiles">
-            <Link href="/guide" className="tile">
+            <Link href="/guide" className="tile" data-tour="start">
               <span className="ic"><BookOpen /></span>
               <b>처음이에요</b>
               <span>5단계 신청 가이드와 30초 자가진단</span>

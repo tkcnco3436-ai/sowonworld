@@ -1,13 +1,15 @@
 /* ===== 제작 화면 ===== */
 .pf-builder { display: grid; grid-template-columns: minmax(0, 420px) minmax(0, 1fr); gap: 28px; align-items: start; }
-@media (max-width: 960px) { .pf-builder { grid-template-columns: 1fr; } }
+@media (max-width: 960px) { .pf-builder { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 420px) { .pf-field .pf-row2 { grid-template-columns: minmax(0, 1fr); } .pf-builder .pf-field { padding: 14px; } }
 .pf-form { display: flex; flex-direction: column; gap: 16px; }
 .pf-field { border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; margin: 0; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .pf-field legend { font-weight: 900; color: var(--ink); font-size: 17px; padding: 0 6px; }
 .pf-field label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700; color: var(--ink); }
 .pf-field input:not([type="color"]):not([type="file"]), .pf-field textarea { font-family: inherit; font-size: 15px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; resize: vertical; min-width: 0; }
 .pf-field input:focus, .pf-field textarea:focus { outline: 2px solid var(--blue); border-color: transparent; }
-.pf-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pf-row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.pf-row2 label, .pf-row2 input { min-width: 0; width: 100%; }
 .pf-act-form { display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 14px; background: var(--panel); }
 .pf-act-head { display: flex; justify-content: space-between; align-items: center; color: var(--ink); }
 .pf-link { background: none; border: 0; padding: 0; color: var(--blue); font-weight: 700; font-family: inherit; font-size: inherit; cursor: pointer; text-decoration: underline; }

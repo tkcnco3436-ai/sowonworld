@@ -60,7 +60,7 @@ export function BoardFilters({ items, initialQuery }: { items: Item[]; initialQu
         <div className="filter-row">
           <input type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="사업명·기관·키워드 검색" aria-label="검색어" id="board-q" />
         </div>
-        <div className="filter-row region-row" role="group" aria-label="내 지역">
+        <div className="filter-row region-row" role="group" aria-label="내 지역" data-tour="region">
           <span>내 지역</span>
           {REGIONS.map((r) => (
             <button key={r} type="button" className="fchip" aria-pressed={region === r} onClick={() => pickRegion(r)}>
@@ -83,7 +83,7 @@ export function BoardFilters({ items, initialQuery }: { items: Item[]; initialQu
       </div>
       <p className="result-count">공고 {filtered.length}건 · 마감 임박순 · 지역 선택 시 전국 공고도 함께 보여요</p>
       {filtered.length ? (
-        <div className="cards">
+        <div className="cards" data-tour="cards">
           {filtered.map(({ program, status }) => (
             <ProgramCard key={program.id} program={program} status={status} />
           ))}

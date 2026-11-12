@@ -45,6 +45,7 @@ export default async function ProgramPage({ params }: Props) {
                 <dt>주관 기관</dt><dd>{p.agency}</dd>
               </dl>
             </div>
+            <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary mobile-only">원문 공고 보기 <ExternalLink /></a>
             <div>
               <h2 style={{ fontSize: 20, fontWeight: 900, marginBottom: 8 }}>한눈에 요약</h2>
               <p>{p.summary}</p>
@@ -53,11 +54,11 @@ export default async function ProgramPage({ params }: Props) {
           </div>
 
           <aside className="side">
-            <div className="side-box">
+            <div className="side-box" data-tour="origin">
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary">원문 공고 보기 <ExternalLink /></a>
               <span className="muted" style={{ fontSize: 13 }}>기관 사이트에서 공고문과 신청 양식을 내려받으세요.</span>
             </div>
-            <div className="side-box">
+            <div className="side-box" data-tour="docs">
               <b style={{ color: "var(--ink)" }}>준비할 서류 {docs.length}개</b>
               <ul className="checklist">
                 {docs.map((d) => (

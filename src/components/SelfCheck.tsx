@@ -25,7 +25,7 @@ export function SelfCheck() {
   const ok = valid && n < ind.limit;
 
   return (
-    <div className="selfcheck">
+    <div className="selfcheck" data-tour="selfcheck">
       <label htmlFor="sc-industry">
         업종
         <select id="sc-industry" value={industry} onChange={(e) => setIndustry(e.target.value)}>
