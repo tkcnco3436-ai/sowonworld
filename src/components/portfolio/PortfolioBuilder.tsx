@@ -62,19 +62,37 @@ export function PortfolioBuilder() {
     return () => window.removeEventListener("keydown", onKey);
   }, [pages.length]);
 
-  // 미리보기 영역 폭에 맞춰 A4 페이지를 축소
+  // 미리보기 영역 폭에 맞춰 A4 페이지를 축소.
+  // 모바일에서는 미리보기를 상단에 고정하므로 화면 높이의 1/3 안에 들어오게 줄입니다.
   const stageRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0.5);
+  const [mobile, setMobile] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
   const { w, h } = pageSize(data.orientation);
   useLayoutEffect(() => {
     const el = stageRef.current;
     if (!el) return;
-    const fit = () => setScale(Math.min(1, (el.clientWidth - 2) / w, data.orientation === "portrait" ? 760 / h : 1));
+    const mq = window.matchMedia("(max-width: 960px)");
+    const fit = () => {
+      setMobile(mq.matches);
+      const maxH = mq.matches ? window.innerHeight * 0.34 : data.orientation === "portrait" ? 760 : Infinity;
+      setScale(Math.min(1, (el.clientWidth - 2) / w, maxH / h));
+    };
     fit();
     const ro = new ResizeObserver(fit);
     ro.observe(el);
-    return () => ro.disconnect();
+    window.addEventListener("resize", fit);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", fit);
+    };
   }, [w, h, data.orientation]);
+
+  // 작성 중인 칸에 맞춰 미리보기 페이지를 넘깁니다 (업체 정보 → 표지, 활동 → 그 활동 페이지, 연락처 → 마지막 장).
+  const showActivity = (id: string) => {
+    const i = pages.findIndex((p) => p.kind === "activity" && p.activity.id === id);
+    if (i >= 0) setPage(i);
+  };
 
   const isExample = data.company.startsWith("[예시]");
 
@@ -87,18 +105,18 @@ export function PortfolioBuilder() {
           <p className="notice" style={{ display: "block" }}>예시 내용이 들어 있어요. 우리 업체 내용으로 바꾸거나 <button type="button" className="pf-link" onClick={clearAll}>모두 지우고 새로 쓰기</button>를 누르세요.</p>
         )}
 
-        <fieldset className="pf-field">
+        <fieldset className="pf-field" onFocusCapture={() => setPage(0)}>
           <legend>1. 업체 정보</legend>
           <label htmlFor="pf-company">업체명<input id="pf-company" value={data.company} onChange={(e) => update({ company: e.target.value })} placeholder="예: OO베이커리" /></label>
           <label htmlFor="pf-intro">한 줄 소개<textarea id="pf-intro" rows={2} value={data.intro} onChange={(e) => update({ intro: e.target.value })} placeholder="어떤 업체인지 1~2문장으로 적어 주세요" /></label>
           <AiPolish kind="intro" text={data.intro} context={{ company: data.company }} onApply={(t) => update({ intro: t })} />
-          <label htmlFor="pf-contact">연락처 (마지막 장에 표시)<input id="pf-contact" value={data.contact} onChange={(e) => update({ contact: e.target.value })} placeholder="전화 · 이메일 · SNS" /></label>
+          <label htmlFor="pf-contact">연락처 (마지막 장에 표시)<input id="pf-contact" onFocus={() => setPage(pages.length - 1)} value={data.contact} onChange={(e) => update({ contact: e.target.value })} placeholder="전화 · 이메일 · SNS" /></label>
         </fieldset>
 
         <fieldset className="pf-field">
           <legend>2. 참여 활동</legend>
           {data.activities.map((a, i) => (
-            <div key={a.id} className="pf-act-form">
+            <div key={a.id} className="pf-act-form" onFocusCapture={() => showActivity(a.id)}>
               <div className="pf-act-head">
                 <b>활동 {i + 1}</b>
                 {data.activities.length > 1 && <button type="button" className="pf-link" onClick={() => removeActivity(a.id)}>삭제</button>}
@@ -169,10 +187,17 @@ export function PortfolioBuilder() {
         </fieldset>
       </form>
 
-      <section className="pf-viewer" aria-label="미리보기">
+      <section className={`pf-viewer${mobile && collapsed ? " pf-collapsed" : ""}`} aria-label="미리보기">
         <div className="pf-viewer-bar">
-          <b>미리보기 · A4 {data.orientation === "portrait" ? "세로" : "가로"}</b>
-          <button type="button" className="btn btn-primary" onClick={() => window.print()}>PDF로 저장</button>
+          <b>미리보기 · A4 {data.orientation === "portrait" ? "세로" : "가로"} <span className="pf-count">{current + 1}/{pages.length}</span></b>
+          <div className="pf-viewer-actions">
+            {mobile && (
+              <button type="button" className="pf-toggle" aria-expanded={!collapsed} onClick={() => setCollapsed((c) => !c)}>
+                {collapsed ? "펼치기 ▾" : "접기 ▴"}
+              </button>
+            )}
+            <button type="button" className="btn btn-primary" onClick={() => window.print()}>PDF로 저장</button>
+          </div>
         </div>
         <div className="pf-stage" ref={stageRef} style={{ height: h * scale + 2 }}>
           <div style={{ width: w * scale, height: h * scale }} className="pf-scaled">
