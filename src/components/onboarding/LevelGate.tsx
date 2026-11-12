@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getLevel, setLevel, setTour } from "@/lib/tour";
+import { gateSeen, markGateSeen, setLevel, setTour } from "@/lib/tour";
 
-// 메인에 처음 들어온 사람에게만 띄우는 2분할 입장 화면. 공유 링크로 하위 페이지에 들어온 사람은 막지 않습니다.
+// 사이트에 접속해 메인으로 들어올 때마다 띄우는 2분할 입장 화면.
+// 공유 링크로 하위 페이지에 들어온 사람은 막지 않습니다.
 export function LevelGate() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!getLevel()) setOpen(true);
+    if (!gateSeen()) setOpen(true);
   }, []);
 
   useEffect(() => {
@@ -22,8 +23,10 @@ export function LevelGate() {
 
   const choose = (beginner: boolean) => {
     setLevel(beginner ? "beginner" : "expert");
+    markGateSeen();
     setOpen(false);
-    if (beginner) setTour({ step: 0 });
+    // 초급은 안내를 처음부터, 중급은 진행 중이던 안내가 있어도 끕니다.
+    setTour(beginner ? { step: 0 } : null);
   };
 
   return (

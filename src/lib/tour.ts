@@ -68,6 +68,12 @@ const safe = <T,>(fn: () => T, fallback: T) => {
 export const getLevel = () => safe(() => localStorage.getItem(LEVEL_KEY) as Level | null, null);
 export const setLevel = (l: Level) => safe(() => localStorage.setItem(LEVEL_KEY, l), undefined);
 
+// 입장 화면은 사이트에 새로 접속할 때마다(브라우저 탭 단위) 보여줍니다.
+// 같은 방문 안에서 홈으로 돌아올 때는 다시 띄우지 않습니다.
+const GATE_KEY = "sowonworld-gate-seen";
+export const gateSeen = () => safe(() => sessionStorage.getItem(GATE_KEY) === "1", false);
+export const markGateSeen = () => safe(() => sessionStorage.setItem(GATE_KEY, "1"), undefined);
+
 export const getTour = () => safe<TourState | null>(() => JSON.parse(localStorage.getItem(TOUR_KEY) ?? "null"), null);
 export function setTour(s: TourState | null) {
   safe(() => (s ? localStorage.setItem(TOUR_KEY, JSON.stringify(s)) : localStorage.removeItem(TOUR_KEY)), undefined);
@@ -78,6 +84,7 @@ export function resetOnboarding() {
   safe(() => {
     localStorage.removeItem(LEVEL_KEY);
     localStorage.removeItem(TOUR_KEY);
+    sessionStorage.removeItem(GATE_KEY);
   }, undefined);
 }
 
