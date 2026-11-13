@@ -70,7 +70,7 @@ p { margin: 0; }
 
 /* Generic */
 .section { padding-block: 48px; }
-.section-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
 .section-head h2 { font-size: clamp(22px, 3vw, 28px); font-weight: 900; }
 .eyebrow { font-size: 13px; font-weight: 800; color: var(--blue); letter-spacing: 0.04em; }
 .muted { color: var(--muted); }
@@ -113,6 +113,85 @@ p { margin: 0; }
 .tile span { font-size: 14px; color: var(--muted); }
 .tile .soon { align-self: flex-start; }
 @media (max-width: 820px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ===== 사업 성격 (지원금 지원 / 역량 강화 / 기타) ===== */
+:root {
+  --grant: #2563eb; --grant-bg: #e8effd;
+  --capacity: #c23c6a; --capacity-bg: #ffe8f0;
+  --etc: #4a4a4a; --etc-bg: #f0f0f0;
+}
+.kind-grant { background: var(--grant); color: #fff; }
+.kind-capacity { background: var(--capacity-bg); color: var(--capacity); }
+.kind-etc { background: var(--etc-bg); color: var(--etc); }
+.chip.kind-grant, .chip.kind-capacity, .chip.kind-etc { gap: 4px; }
+
+/* 홈: 어떤 도움이 필요하세요? */
+.kind-entry-section { padding-bottom: 24px; }
+.kind-entry { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.kind-card { display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: var(--radius); text-decoration: none; border: 2px solid transparent; transition: transform .15s, box-shadow .15s; min-width: 0; }
+.kind-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.kind-card-grant { background: var(--grant-bg); border-color: #cddcfb; }
+.kind-card-capacity { background: var(--capacity-bg); border-color: var(--pink); }
+.kind-card-etc { background: var(--panel); border-color: var(--line); }
+.kind-card-icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; background: #fff; }
+.kind-card-grant .kind-card-icon { color: var(--grant); }
+.kind-card-capacity .kind-card-icon { color: var(--capacity); }
+.kind-card-etc .kind-card-icon { color: var(--etc); }
+.kind-card-text { display: flex; flex-direction: column; gap: 4px; }
+.kind-card-text b { font-size: 21px; font-weight: 900; color: var(--ink); }
+.kind-card-text span { font-size: 15px; color: var(--body); }
+.kind-card-count { margin-top: auto; font-size: 15px; font-weight: 800; color: var(--ink); }
+.kind-card-count em { font-style: normal; font-size: 28px; font-weight: 900; margin-right: 2px; font-variant-numeric: tabular-nums; }
+.kind-card-grant .kind-card-count em { color: var(--grant); }
+.kind-card-capacity .kind-card-count em { color: var(--capacity); }
+
+/* 공고 보드: 사업 성격 탭 */
+.kind-tabs { display: grid; grid-template-columns: 0.7fr repeat(3, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.kind-tab { all: unset; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: 16px; border: 2px solid var(--line); background: #fff; min-width: 0; transition: border-color .15s, background .15s; }
+.kind-tab:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.kind-tab-head { display: flex; align-items: center; gap: 6px; color: var(--ink); }
+.kind-tab-head b { font-size: 17px; font-weight: 900; white-space: nowrap; }
+.kind-tab-head em { margin-left: auto; font-style: normal; font-weight: 900; font-size: 15px; padding: 2px 10px; border-radius: 999px; background: var(--panel); font-variant-numeric: tabular-nums; }
+.kind-tab-desc { font-size: 13px; color: var(--muted); }
+.kind-tab-grant .kind-tab-head svg { color: var(--grant); }
+.kind-tab-capacity .kind-tab-head svg { color: var(--capacity); }
+.kind-tab[aria-selected="true"] { border-color: var(--charcoal); background: var(--charcoal); }
+.kind-tab[aria-selected="true"] .kind-tab-head, .kind-tab[aria-selected="true"] .kind-tab-head svg { color: #fff; }
+.kind-tab[aria-selected="true"] .kind-tab-desc { color: #c9cacd; }
+.kind-tab[aria-selected="true"] em { background: rgba(255,255,255,.16); }
+.kind-tab-grant[aria-selected="true"] { background: var(--grant); border-color: var(--grant); }
+.kind-tab-capacity[aria-selected="true"] { background: var(--capacity); border-color: var(--capacity); }
+.kind-tab-grant[aria-selected="true"] .kind-tab-desc, .kind-tab-capacity[aria-selected="true"] .kind-tab-desc { color: rgba(255,255,255,.85); }
+
+/* 공고 상세: 성격 설명 */
+.kind-note { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 14px; font-size: 15px; line-height: 1.6; }
+.kind-note b { color: var(--ink); }
+.kind-note-icon { flex-shrink: 0; width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: #fff; }
+.kind-note-grant { background: var(--grant-bg); }
+.kind-note-grant .kind-note-icon { color: var(--grant); }
+.kind-note-capacity { background: var(--capacity-bg); }
+.kind-note-capacity .kind-note-icon { color: var(--capacity); }
+.kind-note-etc { background: var(--panel); }
+
+.result-bar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+.result-bar .result-count { margin: 0; }
+.result-bar .result-count b { color: var(--ink); }
+.empty-actions { display: flex; gap: 8px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+
+@media (max-width: 720px) {
+  .kind-entry { grid-template-columns: 1fr; gap: 10px; }
+  .kind-card { flex-direction: row; align-items: center; gap: 14px; padding: 14px 16px; }
+  .kind-card-icon { width: 46px; height: 46px; flex-shrink: 0; }
+  .kind-card-text b { font-size: 18px; }
+  .kind-card-text span { font-size: 13px; }
+  .kind-card-count { margin: 0 0 0 auto; white-space: nowrap; font-size: 13px; }
+  .kind-card-count em { font-size: 22px; }
+  /* 탭은 2×2 격자, 설명은 숨기고 크게 누르기 쉽게 */
+  .kind-tabs { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .kind-tab { padding: 12px; }
+  .kind-tab-head b { font-size: 15px; }
+  .kind-tab-desc { display: none; }
+}
 
 /* Program cards */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
@@ -274,3 +353,13 @@ p { margin: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* 공고 보드: 휴대폰에서는 분야·상태 필터를 접어 두어 공고가 먼저 보이게 */
+.filters-more { display: none; }
+.filters-extra { display: contents; }
+@media (max-width: 720px) {
+  .filters-more { display: flex; align-items: center; gap: 6px; justify-content: center; font-family: inherit; font-size: 14px; font-weight: 700; color: var(--body); background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px; cursor: pointer; }
+  .filters-more em { font-style: normal; font-size: 12px; font-weight: 800; background: var(--blue); color: #fff; border-radius: 999px; padding: 1px 8px; }
+  .filters-extra { display: none; flex-direction: column; gap: 12px; }
+  .filters-extra.open { display: flex; }
+}

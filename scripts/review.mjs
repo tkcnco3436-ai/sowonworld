@@ -28,8 +28,18 @@ const flag = (name) => {
 const inbox = read(INBOX);
 const programs = read(PROGRAMS);
 
+// 사업 성격 미리보기 (src/lib/kinds.ts와 같은 규칙). 틀리면 programs.json에 "kind"를 직접 적어 고칩니다.
+const KIND_LABEL = { grant: "지원금 지원", capacity: "역량 강화", etc: "기타" };
+const guessKind = (t) =>
+  ["교육", "컨설팅", "멘토링", "자문", "코칭", "아카데미", "진단"].some((w) => t.includes(w))
+    ? "capacity"
+    : ["지원금", "보조금", "비용", "바우처", "설치", "제작", "개발", "개선", "출품", "출원", "구입비", "임차"].some((w) => t.includes(w))
+      ? "grant"
+      : "etc";
+
 const show = (p, n) => {
   console.log(`\n[${n}] ${p.title}`);
+  console.log(`  사업 성격: ${KIND_LABEL[p.kind ?? guessKind(p.title)]}`);
   console.log(`  기관: ${p.agency} · 지역: ${p.region} · 분야: ${p.categories.join(", ")}`);
   const period = p.applyEnd ? `${p.applyStart ?? "?"} ~ ${p.applyEnd}` : (p.periodNote ?? "상시");
   console.log(`  기간: ${period} · 디자인 관련도: ${p.designScore ?? "-"}`);

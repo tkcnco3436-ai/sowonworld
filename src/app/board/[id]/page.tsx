@@ -6,6 +6,8 @@ import { formatPeriod, getStatus } from "@/lib/status";
 import { getDoc } from "@/lib/documents";
 import { StatusChip } from "@/components/ProgramCard";
 import { ExternalLink } from "@/components/Icons";
+import { KindBadge, KindIcon } from "@/components/KindIcon";
+import { kindInfo, kindOf } from "@/lib/kinds";
 
 export const revalidate = 3600;
 
@@ -21,14 +23,17 @@ export default async function ProgramPage({ params }: Props) {
   if (!p) notFound();
   const status = getStatus(p);
   const docs = p.requiredDocs.map(getDoc).filter((d) => d !== undefined);
+  const kind = kindOf(p);
+  const info = kindInfo(kind);
 
   return (
     <section className="section">
       <div className="container">
-        <Link href="/board" className="link-more">← 공고 목록</Link>
+        <Link href={`/board?type=${kind}`} className="link-more">← {info.label} 공고 목록</Link>
         <div className="detail" style={{ marginTop: 16 }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 20, minWidth: 0 }}>
             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+              <KindBadge kind={kind} label={info.label} />
               <StatusChip status={status} />
               {p.categories.map((c) => <span key={c} className="chip chip-tag">{c}</span>)}
               {p.sample && <span className="chip chip-sample">예시</span>}
@@ -36,6 +41,10 @@ export default async function ProgramPage({ params }: Props) {
             <h1>{p.title}</h1>
             <p className="muted">{p.agency} · {p.region}</p>
             {p.sample && <p className="notice">화면 확인용 예시 공고입니다. 실제 공고가 아니에요.</p>}
+            <div className={`kind-note kind-note-${kind}`}>
+              <span className="kind-note-icon"><KindIcon kind={kind} size={22} /></span>
+              <p><b>{info.label}</b> · {info.detail}</p>
+            </div>
             <div className="info">
               <dl>
                 <dt>지원 대상</dt><dd>{p.target}</dd>

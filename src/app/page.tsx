@@ -3,6 +3,8 @@ import { getPrograms } from "@/lib/programs";
 import { getStatus, sortByDeadline } from "@/lib/status";
 import { ProgramCard } from "@/components/ProgramCard";
 import { LevelGate } from "@/components/onboarding/LevelGate";
+import { KindIcon } from "@/components/KindIcon";
+import { KINDS, kindOf } from "@/lib/kinds";
 import { BookOpen, FileCheck, Megaphone, Search, Sparkles } from "@/components/Icons";
 
 export const revalidate = 3600;
@@ -13,6 +15,7 @@ export default function Home() {
   const programs = sortByDeadline(getPrograms());
   const urgent = programs.filter((p) => ["closing", "open"].includes(getStatus(p).kind)).slice(0, 4);
   const hasSample = programs.some((p) => p.sample);
+  const active = programs.filter((p) => ["closing", "open", "always"].includes(getStatus(p).kind));
 
   return (
     <>
@@ -38,7 +41,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section kind-entry-section">
+        <div className="container">
+          <div className="section-head">
+            <h2>어떤 도움이 필요하세요?</h2>
+            <span className="muted" style={{ fontSize: 14 }}>지금 신청할 수 있는 공고 기준</span>
+          </div>
+          <div className="kind-entry">
+            {KINDS.map((k) => {
+              const n = active.filter((p) => kindOf(p) === k.key).length;
+              return (
+                <Link key={k.key} href={`/board?type=${k.key}`} className={`kind-card kind-card-${k.key}`}>
+                  <span className="kind-card-icon"><KindIcon kind={k.key} size={28} /></span>
+                  <span className="kind-card-text">
+                    <b>{k.label}</b>
+                    <span>{k.desc}</span>
+                  </span>
+                  <span className="kind-card-count"><em>{n}</em>건 →</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="tiles">
             <Link href="/guide" className="tile" data-tour="start">

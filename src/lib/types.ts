@@ -7,6 +7,7 @@ export type Program = {
   agency: string;
   region: string; // "전국" 또는 시·도 이름
   categories: Category[];
+  kind?: "grant" | "capacity" | "etc"; // 사업 성격. 비워 두면 제목으로 자동 분류 (lib/kinds.ts)
   target: string;
   support: string;
   amount?: string;
