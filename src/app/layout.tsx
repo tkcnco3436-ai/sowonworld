@@ -7,6 +7,7 @@ import { FamilyBar } from "@/components/FamilyBar";
 import { SANGINWORLD_URL } from "@/lib/site";
 import { Tour } from "@/components/onboarding/Tour";
 import { RestartTour } from "@/components/onboarding/RestartTour";
+import { HelpButton } from "@/components/onboarding/HelpButton";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         </footer>
         <BottomNav />
         <Tour />
+        <HelpButton />
       </body>
     </html>
   );

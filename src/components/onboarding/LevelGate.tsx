@@ -1,16 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { getTour, setLevel, setTour } from "@/lib/tour";
+import { getLevel, setLevel, setTour } from "@/lib/tour";
 
-// 홈(메인)에 올 때마다 띄우는 2분할 입장 화면.
-// 초급 안내가 진행 중일 때는 안내를 가로막지 않도록 띄우지 않고,
-// 공유 링크로 하위 페이지에 들어온 사람도 막지 않습니다.
+// 처음 방문한 사람에게만 메인에서 한 번 띄우는 2분할 입장 화면.
+// 이후에는 화면 오른쪽 아래 물음표 버튼(HelpButton)으로 언제든 초급 안내를 다시 볼 수 있습니다.
+// 공유 링크로 하위 페이지에 들어온 사람은 막지 않습니다.
 export function LevelGate() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!getTour()) setOpen(true);
+    if (!getLevel()) setOpen(true);
   }, []);
 
   useEffect(() => {
